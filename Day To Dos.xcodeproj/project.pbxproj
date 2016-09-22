@@ -14,6 +14,8 @@
 		4A89E1811D93A4D8002A45E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A89E17F1D93A4D8002A45E7 /* LaunchScreen.storyboard */; };
 		4A89E18C1D93A4D9002A45E7 /* Day_To_DosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89E18B1D93A4D9002A45E7 /* Day_To_DosTests.swift */; };
 		4A89E1971D93A4D9002A45E7 /* Day_To_DosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89E1961D93A4D9002A45E7 /* Day_To_DosUITests.swift */; };
+		4A89E1A71D93A6A4002A45E7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89E1A61D93A6A4002A45E7 /* DataSource.swift */; };
+		4A89E1A91D93A778002A45E7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89E1A81D93A778002A45E7 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		4A89E1921D93A4D9002A45E7 /* Day To DosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Day To DosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A89E1961D93A4D9002A45E7 /* Day_To_DosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day_To_DosUITests.swift; sourceTree = "<group>"; };
 		4A89E1981D93A4D9002A45E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A89E1A61D93A6A4002A45E7 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		4A89E1A81D93A778002A45E7 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				4A89E17D1D93A4D8002A45E7 /* Assets.xcassets */,
 				4A89E17F1D93A4D8002A45E7 /* LaunchScreen.storyboard */,
 				4A89E1821D93A4D8002A45E7 /* Info.plist */,
+				4A89E1A61D93A6A4002A45E7 /* DataSource.swift */,
+				4A89E1A81D93A778002A45E7 /* Task.swift */,
 			);
 			path = "Day To Dos";
 			sourceTree = "<group>";
@@ -262,6 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A89E1A91D93A778002A45E7 /* Task.swift in Sources */,
+				4A89E1A71D93A6A4002A45E7 /* DataSource.swift in Sources */,
 				4A89E1791D93A4D8002A45E7 /* ViewController.swift in Sources */,
 				4A89E1771D93A4D8002A45E7 /* AppDelegate.swift in Sources */,
 			);

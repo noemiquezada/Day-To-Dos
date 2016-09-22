@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum Keys:String{
+    case initialized
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
