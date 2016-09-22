@@ -45,6 +45,21 @@ class DataSource:NSObject {
         return (name:task!.name , completed:task!.completed)
         
     }
+
+    /**
+     Toggles the completion state of a task at a given index for a specific date
+     - parameters:
+        - index: The index of the task that will have it's completion state toggled
+        - forDate: The date of the task is found at
+     - returns: Void
+     */
+    func toggleCompletion(index: Int, forDate: String) {
+        var taskArray = tasks[forDate]
+        var task = taskArray?[index]
+        task?.completed = !(task?.completed)!
+        taskArray?[index] = task!
+        tasks[forDate] = taskArray
+    }
     
     /**
      Returns the Number of Tasks for certain day
