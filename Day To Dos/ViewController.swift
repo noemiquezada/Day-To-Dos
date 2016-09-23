@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var date = ""
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
@@ -26,7 +25,6 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableViewAutomaticDimension
-        
         
     }
     

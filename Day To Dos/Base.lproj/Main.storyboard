@@ -21,7 +21,7 @@
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="84z-hO-bg8">
                                 <subviews>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HYm-Jf-eC8">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HYm-Jf-eC8">
                                         <date key="date" timeIntervalSinceReferenceDate="496299874.42041999">
                                             <!--2016-09-23 05:04:34 +0000-->
                                         </date>
@@ -115,8 +115,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="statusImageView" destination="Aoo-Ik-E4e" id="SvQ-v1-Nd9"/>
-                                            <outlet property="taskLabel" destination="eiT-bZ-kiR" id="RNM-0Y-745"/>
+                                            <outlet property="statusImageView" destination="Aoo-Ik-E4e" id="hTO-uL-IqS"/>
+                                            <outlet property="taskLabel" destination="eiT-bZ-kiR" id="T1k-uK-zcj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

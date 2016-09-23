@@ -65,8 +65,11 @@ class DataSource:NSObject {
      */
     func taskCount() -> Int {
         
-        let taskArray = tasks[retrievalDate]
-        return (taskArray?.count)!
+        if let taskArray = tasks[retrievalDate] {
+            return taskArray.count
+        }
+        return 0
+
         
     }
     
