@@ -1,26 +1,143 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kLU-Lw-Z7R">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Date Picker-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DatePickerViewController" customModule="Day_To_Dos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="84z-hO-bg8">
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HYm-Jf-eC8">
+                                        <date key="date" timeIntervalSinceReferenceDate="496299874.42041999">
+                                            <!--2016-09-23 05:04:34 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="84z-hO-bg8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Vyj-fQ-oKU"/>
+                            <constraint firstItem="84z-hO-bg8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dk2-5G-NPA"/>
+                            <constraint firstItem="84z-hO-bg8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tDF-ph-G7h"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Date Picker" id="KGx-R7-D9A">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Xea-J6-XKV">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="Yak-eB-LdG" kind="show" id="26P-G2-yiZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="HYm-Jf-eC8" id="rnM-kf-LY5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1033" y="786"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rpa-Ad-mLg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kLU-Lw-Z7R" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="72g-rL-D7Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Q2I-PS-z00"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24T-9q-dGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="785.75712143928047"/>
+        </scene>
+        <!--Simple To Do-->
+        <scene sceneID="ecg-bB-3Zj">
+            <objects>
+                <viewController id="Yak-eB-LdG" customClass="ViewController" customModule="Day_To_Dos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fCj-on-Tr6"/>
+                        <viewControllerLayoutGuide type="bottom" id="LZm-b9-BOP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ip2-bz-fLX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z98-2I-ka6">
+                                <frame key="frameInset"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="AMS-hE-hiZ" customClass="TaskCell" customModule="Day_To_Dos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AMS-hE-hiZ" id="F5U-3y-foR">
+                                            <frame key="frameInset" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aoo-Ik-E4e">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="4v7-Bw-Uin"/>
+                                                        <constraint firstAttribute="width" constant="44" id="bCx-fW-Nic"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiT-bZ-kiR">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eiT-bZ-kiR" firstAttribute="leading" secondItem="Aoo-Ik-E4e" secondAttribute="trailing" constant="16" id="03F-el-DMI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eiT-bZ-kiR" secondAttribute="trailing" constant="16" id="Ekx-vG-6LE"/>
+                                                <constraint firstItem="Aoo-Ik-E4e" firstAttribute="leading" secondItem="F5U-3y-foR" secondAttribute="leadingMargin" id="aEn-BD-PRI"/>
+                                                <constraint firstItem="eiT-bZ-kiR" firstAttribute="top" secondItem="F5U-3y-foR" secondAttribute="topMargin" constant="8" id="trt-3f-Uie"/>
+                                                <constraint firstItem="Aoo-Ik-E4e" firstAttribute="centerY" secondItem="F5U-3y-foR" secondAttribute="centerY" id="wxc-Ug-qTT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="statusImageView" destination="Aoo-Ik-E4e" id="SvQ-v1-Nd9"/>
+                                            <outlet property="taskLabel" destination="eiT-bZ-kiR" id="RNM-0Y-745"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Simple To Do" id="BLA-hh-gfI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="40u-5n-KKM">
+                            <connections>
+                                <action selector="addPressed:" destination="Yak-eB-LdG" id="m2C-4Q-eZS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Z98-2I-ka6" id="PZj-fp-liI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GMl-ZK-9KZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884" y="786"/>
         </scene>
     </scenes>
 </document>

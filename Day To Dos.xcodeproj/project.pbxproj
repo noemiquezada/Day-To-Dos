@@ -19,6 +19,7 @@
 		4A89E1AB1D94E39D002A45E7 /* DataSourceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89E1AA1D94E39D002A45E7 /* DataSourceExtension.swift */; };
 		4A89E1AD1D94E4CE002A45E7 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89E1AC1D94E4CE002A45E7 /* TaskCell.swift */; };
 		4A89E1AF1D94EB5E002A45E7 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89E1AE1D94EB5E002A45E7 /* ViewControllerExtension.swift */; };
+		4A89E1B11D94F03F002A45E7 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89E1B01D94F03F002A45E7 /* DatePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4A89E1AA1D94E39D002A45E7 /* DataSourceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceExtension.swift; sourceTree = "<group>"; };
 		4A89E1AC1D94E4CE002A45E7 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		4A89E1AE1D94EB5E002A45E7 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		4A89E1B01D94F03F002A45E7 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				4A89E1A81D93A778002A45E7 /* Task.swift */,
 				4A89E1AA1D94E39D002A45E7 /* DataSourceExtension.swift */,
 				4A89E1AC1D94E4CE002A45E7 /* TaskCell.swift */,
+				4A89E1B01D94F03F002A45E7 /* DatePickerViewController.swift */,
 			);
 			path = "Day To Dos";
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				4A89E1A71D93A6A4002A45E7 /* DataSource.swift in Sources */,
 				4A89E1AF1D94EB5E002A45E7 /* ViewControllerExtension.swift in Sources */,
 				4A89E1791D93A4D8002A45E7 /* ViewController.swift in Sources */,
+				4A89E1B11D94F03F002A45E7 /* DatePickerViewController.swift in Sources */,
 				4A89E1771D93A4D8002A45E7 /* AppDelegate.swift in Sources */,
 				4A89E1AD1D94E4CE002A45E7 /* TaskCell.swift in Sources */,
 				4A89E1AB1D94E39D002A45E7 /* DataSourceExtension.swift in Sources */,
