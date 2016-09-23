@@ -12,10 +12,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let data = DataSource()
+    
+    let defaults = UserDefaults.standard
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if !defaults.bool(forKey: Keys.initialized.rawValue){
+            data.setupDefaultData()
+        }
+        
         return true
     }
 

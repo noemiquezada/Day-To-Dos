@@ -51,7 +51,7 @@ class DataSource:NSObject {
         - index: The index of the task that will have it's completion state toggled
      - returns: Void
      */
-    func toggleCompletion(index: Int, forDate: String) {
+    func toggleCompletion(index: Int) {
         var taskArray = tasks[retrievalDate]
         var task = taskArray?[index]
         task?.completed = !(task?.completed)!
