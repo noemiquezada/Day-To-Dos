@@ -18,7 +18,7 @@ extension DataSource:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let count = taskCount(forDate: "")
+        let count = taskCount()
         
         return count
     }
@@ -27,7 +27,7 @@ extension DataSource:UITableViewDataSource {
         
         guard   let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as? TaskCell else {return UITableViewCell()}
         
-        let task = taskAtIndex(index: indexPath.row, forDate: "")
+        let task = taskAtIndex(index: indexPath.row)
         
         cell.taskLabel.attributedText =  format(text: task.name, strike: task.completed)
         
@@ -50,7 +50,7 @@ extension DataSource:UITableViewDataSource {
         
         switch editingStyle {
         case .delete:
-            delete(index: indexPath.row, forDate: "")
+            delete(index: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             
