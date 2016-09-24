@@ -34,6 +34,7 @@ class DataSource:NSObject {
         taskArray.append(aTask)
         
         tasks[retrievalDate] = taskArray
+        saveData()
     }
     
     /**
@@ -47,7 +48,7 @@ class DataSource:NSObject {
         let taskArray = tasks[retrievalDate]
         let task = taskArray?[index]
         return (name:task!.name , completed:task!.completed)
-        
+
     }
 
     /**
@@ -62,6 +63,7 @@ class DataSource:NSObject {
         task?.completed = !(task?.completed)!
         taskArray?[index] = task!
         tasks[retrievalDate] = taskArray
+        saveData()
     }
     
     /**
@@ -88,6 +90,7 @@ class DataSource:NSObject {
         var taskArray = tasks[retrievalDate]
         taskArray?.remove(at: index)
         tasks[retrievalDate] = taskArray
+        saveData()
     }
     
     /** 
@@ -111,6 +114,45 @@ class DataSource:NSObject {
         defaults.set(true, forKey: Keys.initialized.rawValue) //Set the flag
         defaults.synchronize() //Save the changes immediately
         
+        saveData()
+        
     }
     
+    /**
+     Save the tasks list to NSKeyedArchiver
+     - returns: Void
+     */
+    func saveData(){
+        let data =  NSKeyedArchiver.archivedData(withRootObject: tasks)
+        guard  let filePath = FileController.filePath() else {
+            return
+        }
+        do{
+            try data.write(to: filePath)
+        }
+        catch let error as NSError{
+            print(error.localizedDescription)
+        }
+        
+    }
+    
+    /**
+     Load data from NSKeyedArchiver
+     - returns: Void
+     */
+    func loadData(){
+        guard  let filePath = FileController.filePath() else {return}
+        
+        guard let data =  NSData(contentsOf: filePath) else {return }
+        
+        guard  let list = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as? [String: [Task]] else {
+            return
+        }
+        
+        self.tasks = list
+        
+        
+    }
 }
+    
+

@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if !defaults.bool(forKey: Keys.initialized.rawValue){
             data.setupDefaultData()
+        } else {
+            // Load it from NSKeyedArchiver
+            data.loadData()
         }
         
         return true
