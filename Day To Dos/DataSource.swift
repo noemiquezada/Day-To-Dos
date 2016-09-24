@@ -26,8 +26,13 @@ class DataSource:NSObject {
      */
     func add(task:String) {
         let aTask = Task(name: task, completed: false)
-        var taskArray = tasks[retrievalDate]
-        taskArray?.append(aTask)
+        
+        var taskArray = [Task]()
+        if ((tasks[retrievalDate]) != nil) {
+            taskArray = tasks[retrievalDate]!
+        }
+        taskArray.append(aTask)
+        
         tasks[retrievalDate] = taskArray
     }
     

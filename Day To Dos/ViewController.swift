@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableViewAutomaticDimension
+        navigationItem.title = appDelegate.data.retrievalDate
+        navigationItem.backBarButtonItem?.title = "back"
         
     }
     
