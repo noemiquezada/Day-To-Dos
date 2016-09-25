@@ -10,6 +10,8 @@ import UIKit
 
 enum Keys:String{
     case initialized
+    case name
+    case completed
 }
 
 class ViewController: UIViewController {
