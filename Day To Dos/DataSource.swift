@@ -58,12 +58,14 @@ class DataSource:NSObject {
      - returns: Void
      */
     func toggleCompletion(index: Int) {
-        var taskArray = tasks[retrievalDate]
-        var task = taskArray?[index]
-        task?.completed = !(task?.completed)!
-        taskArray?[index] = task!
-        tasks[retrievalDate] = taskArray
-        saveData()
+        if var taskArray = tasks[retrievalDate] {
+            let task = taskArray[index]
+            task.completed = !task.completed
+            taskArray[index] = task
+            
+            tasks[retrievalDate] = taskArray
+            saveData()
+        }
     }
     
     /**
