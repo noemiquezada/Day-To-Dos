@@ -28,9 +28,54 @@ class Day_To_DosUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCase() {
+        
+        // TC 1
+        print("TC 1")
+        let app = XCUIApplication()
+        XCTAssert(app.staticTexts["Date Picker"].exists)
+        
+        let datePickersQuery = app.datePickers
+        
+        // TC 2
+        print ("TC 2")
+        datePickersQuery.pickerWheels["2016"].adjust(toPickerWheelValue: "2015")
+        
+        // TC 3
+        print ("TC 3")
+        datePickersQuery.pickerWheels["September"].adjust(toPickerWheelValue: "August")
+        
+        // TC 4
+        print("TC 4")
+        datePickersQuery.pickerWheels["25"].adjust(toPickerWheelValue: "26")
+        
+        // TC 5
+        print("TC 5")
+        app.navigationBars["Date Picker"].buttons["Refresh"].tap()
+        let navigationBar = app.navigationBars["2015-08-26"]
+        
+        // TC 6
+        print("TC 6")
+        let addButton = navigationBar.buttons["Add"]
+        addButton.tap()
+        let newTaskAlert = app.alerts["New Task"]
+        newTaskAlert.buttons["Add"].tap()
+        
+        // TC 8
+        print ("TC 8")
+        addButton.tap()
+        newTaskAlert.buttons["Add"].tap()
+
+        // TC 9
+        print("TC 9")
+        addButton.tap()
+        newTaskAlert.buttons["Cancel"].tap()
+        
+        // TC 7
+        print("TC 7")
+        navigationBar.buttons["Date Picker"].tap()
+
+        
     }
     
 }
