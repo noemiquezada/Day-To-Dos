@@ -48,9 +48,40 @@ class Day_To_DosTests: XCTestCase {
         
     }
     
-    func testRetrieveTask() {
+    func testRetrieveTaskTC1() {
         
+        // TC 1
+        print ("TC 1: Valid index and date")
+        data.retrievalDate = "2016-09-24"
+        data.add(task: "Bananas")
+        data.add(task: "Apples")
+        data.add(task: "Grapes")
+        data.add(task: "Blueberries")
+        let task = data.taskAtIndex(index: 3)
+        XCTAssertEqual(task.name, "Blueberries")
         
+    }
+    
+    func testRetrieveTaskTC2() {
+        // TC 2
+        print ("TC 2: Invalid index and valid date")
+        data.retrievalDate = "2016-09-24"
+        XCTAssertNil(data.taskAtIndex(index: -1))
+    }
+    
+    func testRetrieveTaskTC3() {
+        // TC 3
+        print ("TC 3: Invalid date amd index")
+        data.retrievalDate = ""
+        XCTAssertNil(data.taskAtIndex(index: 2))
+        
+    }
+    
+    func testRetrieveTaskTC4() {
+        // TC 4
+        print (" TC 4: Invalid index")
+        data.retrievalDate = "2016-09-24"
+        XCTAssertNil(data.taskAtIndex(index: 999))
         
         
     }
